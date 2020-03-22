@@ -57,10 +57,6 @@ update msg model =
                 Err error ->
                     case error of
                         Http.BadBody e ->
-                            let
-                                foo =
-                                    Debug.log "error: " e
-                            in
                             ( model, Cmd.none )
 
                         _ ->
